@@ -8,7 +8,7 @@ const exec = require('await-exec');
 require("dotenv").config();
 const contract=process.env.CONTRACT;
 
-const port = 8080;
+const PORT = process.env.PORT || 8080;
 app.set('view engine', 'ejs');
 const myCss = {
     style: fs.readFileSync('./views/style.css', 'utf-8')
@@ -38,6 +38,6 @@ app.post('/', encodeUrl, async (req, res) => {
     }
 });
 
-app.listen(port, () => {
+app.listen(PORT, () => {
     console.log("App is up and running.");
 })
