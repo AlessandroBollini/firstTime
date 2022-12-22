@@ -1,10 +1,10 @@
 const { Sequelize, Model, DataTypes } = require('sequelize');
-//const sequelize = new Sequelize('postgresql://bollini:IKx9ECyNttst67_q7pb2rg@oval-possum-5085.7tc.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full');
+const sequelize = new Sequelize('postgres://bollini:jm9g42N53mLmVpsoBCRjiDnAWvS6GzoE@dpg-cei80hcgqg4e0e8lro0g-a/envisioning');
 
-const sequelize = new Sequelize('envisioningv2', 'bollini', 'password', {
+/**const sequelize = new Sequelize('envisioningv2', 'bollini', 'password', {
     host: 'localhost',
     dialect: 'postgres'
-});
+});*/
 
 sequelize
     .authenticate()
